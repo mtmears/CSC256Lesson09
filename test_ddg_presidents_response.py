@@ -24,7 +24,8 @@ def test_us_presidents_in_search():
     # Capture the response into a JSON object
     json_data = response.json()
 
-    # Create list of data regarding the "RelatedTopics->Text" data
+    # Combine all of the response data regarding the "RelatedTopics->Text" data into a single string for
+    # easier comparison
     presidents_response_text = ""
     for data in json_data['RelatedTopics']:
         presidents_response_text += data['Text']
