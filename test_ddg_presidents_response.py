@@ -29,8 +29,8 @@ def test_us_presidents_in_search():
     for data in json_data['RelatedTopics']:
         presidents_response_text += data['Text']
 
-    # Search for each president and compare it to each entry in the response data to make sure that the response
-    # data contains each president
+    # Search for each president and compare it to the entire entry text from the response data to make sure that the
+    # response data contains each president
     for president in set_of_presidents:
         try:
             assert president in presidents_response_text
